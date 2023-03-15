@@ -10,6 +10,9 @@
   <link rel="stylesheet" href="style/fonts.css">
   <link rel="stylesheet" href="style/style.css">
   <link rel="stylesheet" href="style/header.css">
+  <link rel="stylesheet" href="style/hero.css">
+  <link rel="stylesheet" href="style/advantages.css">
+  <link rel="stylesheet" href="style/calc.css">
   <link rel="stylesheet" href="style/footer.css">
 </head>
 
@@ -26,35 +29,35 @@
     <section class="hero section-offset">
       <div class="container hero__container">
         <div class="hero__content gray-block">
-          <h2 class="hero__title">
+          <h2 class="title hero__title">
             Приносим тепло в&nbsp;каждый дом
-            <p class="hero__description">Устанавливаем теплые полы в&nbsp;квартирах, офисах и&nbsp;загородных домах.</p>
-            <a href="#calc" class="button link hero__link">Рассчитать&nbsp;стоимость</a>
           </h2>
+          <p class="hero__description">Устанавливаем теплые полы в&nbsp;квартирах, офисах и&nbsp;загородных домах.</p>
+          <a href="#calc" class="button link hero__link">Рассчитать&nbsp;стоимость</a>
         </div>
 
         <div class="hero__slider-wrapper">
           <div class="filling">
             <div class="filling">
-              <div
-                class="filling hero__image"
-                style="background-image: url('./img/hero_img_01.jpg');">
+              <div class="filling hero__image">
+                <div class="hero__slider-nav">
+                  <button class="hero__slider-btn hero__slider-btn_prev">
+                    <svg width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <rect width="42" height="42" rx="21" transform="matrix(-1 0 0 1 42 0)" fill="#FFC700"/>
+                      <path d="M21 27L15 21L21 15" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M27 21H15" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                  </button>
+                  <button class="hero__slider-btn hero__slider-btn_next">
+                    <svg width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <rect width="42" height="42" rx="21" fill="#FFC700"/>
+                      <path d="M21 27L27 21L21 15" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M15 21H27" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                  </button>
+                </div>
               </div>
             </div>
-            <button class="hero__slider-btn hero__slider-btn_prev">
-              <svg width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect width="42" height="42" rx="21" transform="matrix(-1 0 0 1 42 0)" fill="#FFC700"/>
-                <path d="M21 27L15 21L21 15" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                <path d="M27 21H15" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-            </button>
-            <button class="hero__slider-btn hero__slider-btn_next">
-              <svg width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect width="42" height="42" rx="21" fill="#FFC700"/>
-                <path d="M21 27L27 21L21 15" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                <path d="M15 21H27" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-            </button>
           </div>
         </div>
       </div>
@@ -62,7 +65,7 @@
 
     <section class="advatages section-offset">
       <div class="container advatages__container">
-        <h2 class="adventages__title">Наши преимущества</h2>
+        <h2 class="title adventages__title">Наши преимущества</h2>
         <ul class="adventages__list list-reset">
           <li class="adventages__item">Надежные материалы</li>
           <li class="adventages__item">опытные монтажники</li>
@@ -76,7 +79,7 @@
     <section class="calc section-offset" id="calc">
       <div class="container calc__container">
         <div class="calc__content gray-block">
-          <h2 class="calc__title">Рассчитайте стоимость</h2>
+          <h2 class="title calc__title">Рассчитайте стоимость</h2>
           <form class="calc__form">
             <fieldset class="calc__fieldset calc__fieldset_size">
               <label class="calc__wrapper-input calc__wrapper-input-size">
@@ -121,6 +124,8 @@
             <p class="calc__result">
               <span class="calc__text">Площадь</span>
               <span class="calc__result-text">35 кв.м</span>
+            </p>
+            <p class="calc__result">
               <span class="calc__text">Примерная стоимость</span>
               <span class="calc__result-text">42590 руб</span>
             </p>

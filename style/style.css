@@ -38,6 +38,7 @@ body {
 }
 
 .button {
+  /* display: inline-block; */
   cursor: pointer;
   border: none;
   border-radius: 24px;
@@ -65,4 +66,15 @@ body {
 .gray-block {
   background-color: #F8F8F8;
   border-radius: 12px;
+  padding: 50px;
+  min-height: 530px;
+}
+
+.title {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-weight: 500;
+  font-size: 44px;
+  line-height: 130%;
+  text-transform: uppercase;
 }
