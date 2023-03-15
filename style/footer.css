@@ -1,5 +1,4 @@
 .footer {
-  margin-bottom: 40px;
 }
 
 .footer__container {
@@ -18,41 +17,37 @@
   grid-area: logo;
 }
 
-.footer__social {
-  grid-area: social;
+.footer__list {
   display: flex;
+  flex-direction: column;
+}
+
+.footer__social {
+  flex-direction: row;
+  grid-area: social;
   gap: 24px;
   justify-self: end;
+  padding-top: 8px;
 }
 
 .footer__contact {
   grid-area: contact;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 150%;
-  color: #232020;
+  gap: 16px;
+  padding-top: 8px;
 }
 
 .footer__copyright {
   grid-area: copyright;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 150%;
-  color: #232020;
+  margin: 0;
 }
 
 .footer__developer {
   grid-area: developer;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 150%;
-  color: #232020;
+  gap: 8px;
 }
 
-.footer__link {
-  text-decoration: none;
-  color: #232020;
+.footer__link_contact {
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
