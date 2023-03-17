@@ -10,12 +10,14 @@
 }
 
 .adventages__title {
-  flex-basis: 50%;
+  /* flex-basis: 50%; */
+  width: var(--width-block);
   max-width: 480px;
 }
 
 .adventages__list {
-  flex-basis: 50%;
+  /* flex-basis: 50%; */
+  width: var(--width-block);
 }
 
 .adventages__item {
@@ -33,3 +35,52 @@
 .adventages__item:last-child {
   margin-bottom: 0;
 }
+
+@media (max-width: 1240px) {
+  .advatages__container {
+    padding: 0 30px;
+  }
+
+  .adventages__title {
+    max-width: 330px;
+  }
+
+  .adventages__item {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 920px) {
+  .advatages__container {
+    flex-direction: column;
+    gap: 24px;
+  }
+  
+  .adventages__title {
+    max-width: 440px;
+    /* margin-bottom: 24px; */
+    width: 100%;
+  }
+
+  .adventages__list {
+    width: 100%;
+  }
+
+  .adventages__item {
+    font-size: 16px;
+    margin-bottom: 16px;
+  }
+}
+
+@media (max-width: 560px) {
+  .advatages__container {
+    padding: 0 20px;
+  }
+
+  .adventages__item {
+    font-size: 14px; 
+    padding-left: 24px;
+  }
+
+}
+  

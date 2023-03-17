@@ -1,7 +1,7 @@
 :root {
   --width-slide: 590px;
   --heigt-slide: 530px;
-  --width-block: calc(50% - 10px);
+  --width-block: calc(50% - var(--gap) / 2);
   --gap: 10px;
   --padding: 50px;
 }
@@ -54,6 +54,22 @@ body {
   text-transform: uppercase;
   color: #232020;
   background-color: #ffc700;
+}
+
+.button:focus {
+  border: 1px solid #9E7B00;
+}
+
+.button:hover {
+  background: #FFD952;
+}
+
+.button:disabled {
+  background: #E0E0E0;
+  border-radius: 24px;
+  background: #E0E0E0;
+  color: #898989;
+  cursor: auto;
 }
 
 .section-offset {
