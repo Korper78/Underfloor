@@ -48,19 +48,34 @@ body {
 .button {
   /* display: inline-block; */
   cursor: pointer;
-  border: none;
+  border: 1px solid #ffc700;
   border-radius: 24px;
   padding: 18px 40px;
   text-transform: uppercase;
   color: #232020;
   background-color: #ffc700;
+  outline: none;
+}
+
+.button_o {
+  background-color: transparent;
+  border: 1px solid #232020;
 }
 
 .button:focus {
-  border: 1px solid #9E7B00;
+  border-color: #9E7B00;
+}
+
+.button_o:focus {
+  border-color: #FFC700;
 }
 
 .button:hover {
+  background: #FFD952;
+}
+
+.button_o:hover {
+  border: none;
   background: #FFD952;
 }
 
@@ -70,6 +85,13 @@ body {
   background: #E0E0E0;
   color: #898989;
   cursor: auto;
+}
+
+.button_o:disabled {
+  background-color: transparent;
+  border: 1px solid #E4E4E4;
+  cursor: auto;
+  color: #E0E0E0;
 }
 
 .section-offset {
