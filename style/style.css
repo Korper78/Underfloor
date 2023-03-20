@@ -38,6 +38,15 @@ body {
 .link {
   text-decoration: none;
   color: inherit;
+  transition: color 0.2s ease-in-out;
+}
+
+.link:hover {
+  color: #FFD952;
+}
+
+.link:focus {
+
 }
 
 .image {
@@ -62,27 +71,27 @@ body {
   border: 1px solid #232020;
 }
 
-.button:focus {
+.button:focus-visible {
   border-color: #9E7B00;
 }
 
-.button_o:focus {
+.button_o:focus-visible {
   border-color: #FFC700;
 }
 
 .button:hover {
-  background: #FFD952;
+  background-color: #FFD952;
+  border-color: #FFD952;
 }
 
-.button_o:hover {
-  border: none;
-  background: #FFD952;
+.button:active {
+  transform: translate(2px, 2px);
 }
 
 .button:disabled {
-  background: #E0E0E0;
-  border-radius: 24px;
-  background: #E0E0E0;
+  pointer-events: none;
+  background-color: #E0E0E0;
+  border-color: #E0E0E0;
   color: #898989;
   cursor: auto;
 }
