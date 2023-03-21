@@ -27,6 +27,7 @@ const totalPrice = document.querySelector('.js-total-price');
 const result = document.querySelector('.calc__result-wrapper');
 const resultButton = document.querySelector('.calc__submit');
 const orderButton = document.querySelector('.header__button');
+const orderBottomButton = document.querySelector('.calc__order');
 
 const tariff = {
   economy: 550,
@@ -50,6 +51,8 @@ calcForm.addEventListener('submit', (event) => {
     const price = square * tariff[calcForm.tariff.value];
     
     result.style.display = 'block';
+    // orderBottomButton.style.display = 'block';
+    orderBottomButton.classList.add('calc__order_show');
     totalSquare.textContent = `${square}  кв.м`;
     totalPrice.textContent = `${price} руб`
 
@@ -133,3 +136,66 @@ modalController({
   btnOpen: '.button_o',
   btnClose: '.modal__close',
 });
+
+const phone = document.getElementById('phone');
+const imPhone = new Inputmask("+7(999)999-99-99");
+
+imPhone.mask(phone);
+
+const validator = new JustValidate('.modal__form', {
+  errorLabelCssClass: 'modal__input-error',
+  errorLabelStyle: {
+    color: '#ffc700',
+  }
+});
+
+validator
+  .addField('#name', [
+    {
+      rule: 'required',
+      errorMessage: 'Ваше имя',
+    },
+    {
+      rule: 'minLength',
+      value: 3,
+      erroeMessage: 'Не короче 3 символов',
+    },
+    {
+      rule: 'maxLength',
+      value: 30,
+      erroeMessage: 'Не более 30 символов',
+    },
+  ])
+  .addField('#phone', [
+    {
+      rule: 'required',
+      errorMessage: 'Ваш телефон',
+    },
+    {
+      validator: value => {
+        const number = phone.inputmask.unmaskedvalue();
+        return number.length === 10;
+      },
+      errorMessage: 'Некорректный номер',
+    },
+  ]);
+
+  validator.onSuccess((event) => {
+    const form = event.currentTarget;
+    fetch('https://jsonplaceholder.typicode.com/posts', {
+      method: 'POST',
+      body: JSON.stringify({
+        name: form.name.value,
+        phone: form.phone.value,
+      }),
+      headers: {
+        'Content-type': 'application/json; charset=UTF-8',
+      },
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        form.reset();
+        alert(`Ваша заявка №${data.id} принята, мы перезвоним.`);
+      });
+  });
+

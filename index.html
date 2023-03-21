@@ -11,6 +11,8 @@
   <link rel="preload" href="fonts/inter-v12-cyrillic_latin-regular.woff2" as="font" crossorigin>
 
   <link rel="stylesheet" href="style/normalize.css">
+  <link rel="stylesheet" href="style/swiper-bundle.min.css">
+
   <link rel="stylesheet" href="style/fonts.css">
   <link rel="stylesheet" href="style/style.css">
   <link rel="stylesheet" href="style/header.css">
@@ -20,10 +22,9 @@
   <link rel="stylesheet" href="style/footer.css">
   <link rel="stylesheet" href="style/modal.css">
 
-  <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" /> -->
-  <link rel="stylesheet" href="style/swiper-bundle.min.css">
-  <!-- <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js" defer></script> -->
   <script src="js/swiper-bundle.min.js" defer></script>
+  <script src="js/just-validate.production.min.js" defer></script>
+  <script src="js/inputmask.min.js" defer></script>
 
   <script src="js/script.js" defer></script>
 </head>
@@ -51,7 +52,7 @@
             Приносим тепло в&nbsp;каждый дом
           </h2>
           <p class="hero__description">Устанавливаем теплые полы в&nbsp;квартирах, офисах и&nbsp;загородных домах.</p>
-          <a href="#calc" class="button link hero__link">Рассчитать&nbsp;стоимость</a>
+          <a href="#calc" class="button hero__link">Рассчитать&nbsp;стоимость</a>
         </div>
 
         <div class="hero__slider-block">
@@ -149,6 +150,7 @@
 
             </fieldset>
             <button class="button calc__submit" type="submit" disabled>Рассчитать</button>
+            <button class="button calc__order button_o">Заказать</button>
           </form>
         </div>
         <div class="calc__total">

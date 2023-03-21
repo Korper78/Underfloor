@@ -159,6 +159,14 @@
 .calc__result-text {
 }
 
+.calc__order {
+  display: none;
+}
+
+.calc__order_show {
+  display: inline-block;
+}
+
 @media (max-width: 1240px) {
   .calc__title {
     margin-bottom: 24px;
@@ -239,10 +247,14 @@
   }
 
   .calc__total {
-    min-height: auto;
+    min-height: 128px;
+
   }
 
   .calc__result-wrapper {
     padding: 16px;
+  }
+  .calc__result {
+    margin-bottom: 8px;
   }
 }

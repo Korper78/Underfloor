@@ -84,6 +84,13 @@
   padding: 0 25px;
 }
 
+.modal__input-error {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  font-size: 12px;
+}
+
 .modal__submit {
 }
 
